@@ -1,0 +1,20 @@
+\begin{center}\small{
+  See the original problem statement from BIO 2023 Round 2 at
+  \url{https://www.olympiad.org.uk/papers/2023/final/milk.pdf}
+}\end{center}
+
+Houses in The Endians are connected by a sophisticated series of tubes, providing a constant supply of tea to insatiable residents. In the event of a catastrophe, such as milk contaminating the supply, an emergency cutoff system kicks in to limit the spread. He is currently busy pedaling his bike around the houses turning off valves.
+
+There are $h$ houses (numbered $1$ to $h$) and each is connected directly to at most three other houses. It takes an hour for milk to spread from each contaminated house to all directly connected houses. Similarly, it takes an hour to pedal between any two houses. On reaching a house the valves are instantaneously turned off, cutting the house off from all other houses. It is not permitted to visit a house that is already contaminated.
+
+The contamination starts at house 1 and the residents, currently prophesying war, wish to minimise the number of houses that become contaminated. House 1, due to being connected to the local pumping station, is only directly connected to at most two other houses.
+
+
+For example, suppose the tubes connect 1---2, 1---3, 2---4, 2---5 \& 4---5:
+
+\begin{enumerate}
+  \item House 1 is contaminated at hour 0;
+  \item If house 3 is cut off, at hour 1 houses 1 \& 2 will be contaminated. If house 4 is then cut off, at hour 2 houses 1, 2 \& 5 will be contaminated. No more houses remain to be contaminated.
+  \item If instead house 2 was initially cut off, at hour 1 houses 1 \& 3 will be contaminated. Houses 4 \& 5 can no longer be reached by the tubes so will not be contaminated.
+
+\end{enumerate}

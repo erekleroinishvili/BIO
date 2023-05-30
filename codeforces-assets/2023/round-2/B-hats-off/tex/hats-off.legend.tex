@@ -1,0 +1,19 @@
+\begin{center}\small{
+  See the original problem statement from BIO 2023 Round 2 at
+  \url{https://www.olympiad.org.uk/papers/2023/final/hats.pdf}
+}\end{center}
+
+\it{Greenlight Casting Couch's} remake of the classic musical \it{Bit Players} in 2020 proved to be a great success. The merchandising rights alone for themed bowler hats and straw boaters propelled the studio, if not to the A or B league, to at least C++. It seems that every amateur dramatics society is lining up, quite literally, to perform \it{Hats Off!}, the licensed version for the small stage.
+
+In the opening number the cast members appear in a straight line, with each member's hat either \it{up} or \it{down}, and each person either facing the audience or turned around. Everyone remains in the same position in the line throughout the scene as they turn around and manipulate their hats according to the choreography.
+
+The script for the musical indicates, for every possible combination of hats, which direction each cast member should face. The choreographer's job is to select a subset of these combinations for the show. Every member strives for a balanced performance so, when the choreography is being fixed, each member needs to have their hat up and down an equal number of times when facing the audience. Talent scouts cannot recognise actors when they're turned around so the cast do not strive for balance in those situations.
+
+Hats will be represented by $u$ (up) and $d$ (down) when someone faces the audience, and $n$ (up) and $p$ (down) when turned-around. A choreography can only contain each combination of hats at most once and must contain at least one combination.
+
+For example, suppose there are 2 cast members:
+\begin{itemize}
+  \item One possible script, showing all 4 combinations of hats, is: $up$, $du$, $uu$, $pd$;
+  \item All 4 combinations cannot be in a balanced choreography as the leftmost cast member would have, when facing the audience, their hat up twice but only down once;
+  \item The following is a balanced choreography: $up$, $du$, $pd$.
+\end{itemize}

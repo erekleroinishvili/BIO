@@ -1,0 +1,35 @@
+\begin{center}\small{
+  See the original problem statement from BIO 2023 Round 2 at
+  \url{https://www.olympiad.org.uk/papers/2023/final/fork.pdf}
+}\end{center}
+
+The spies of Alpha Complex and Beta Complex enjoy a healthy rivalry. Many a quarrel between the two has been settled by the losing complex catering an extravagant dinner for the winner. Many a table has been turned by incomprehensible etiquette leading to the dining spies being unable to indulge in the feast.
+
+A long rectangular dining table has been set up, with $n$ evenly spaced seats on two opposite sides. At every position on the table is an impressive choice of $m$ items of cutlery; the same for each position. One spy sits at each position at the table, holding in their hand a single piece of cutlery and contemplating whether it is the correct one to use to eat their starter, whilst aiming to look suave, sophisticated and not too desperate.
+
+Each spy carefully watches their neighbours: the spy immediately on either side and the spy directly across the table. Spies trust only the opinion of neighbours who hold the same piece of cutlery as themselves. If they see a trusted neighbour switch to a different piece of cutlery they will immediately follow their example and switch to the same. Spies are very hungry so any cascading effect happens instantaneously.
+
+Only the first spy in the first row is brave enough to change their mind without following the example of a neighbour. The catering complex would like to know, once the spies stop changing their mind, how many (including the first spy) have chosen the same piece of cutlery as the trendsetter.
+
+For example, suppose that the cutlery initially selected by our spies is
+\begin{center}
+  \begin{tabular}{llll}
+    $1$ & $3$ & $3$ & $3$ \\
+    $2$ & $1$ & $2$ & $1$
+  \end{tabular}
+\end{center}
+
+\begin{itemize}
+  \item If the first spy changes their mind $1\rightarrow2\rightarrow1\rightarrow2\rightarrow1\rightarrow3$ the table will change
+\end{itemize}
+    \begin{tabular}{lllllllllllllllllllllllllllll}
+      $1$&$3$&$3$&$3$ &\multirow{2}{*}{$\rightarrow$}& $2$&$3$&$3$&$3$ &\multirow{2}{*}{$\rightarrow$}& $1$&$3$&$3$&$3$ &\multirow{2}{*}{$\rightarrow$}& $2$&$3$&$3$&$3$ &\multirow{2}{*}{$\rightarrow$}& $1$&$3$&$3$&$3$ &\multirow{2}{*}{$\rightarrow$}& $3$&$3$&$3$&$3$ \\
+      $2$&$1$&$2$&$1$ && $2$&$1$&$2$&$1$ && $1$&$1$&$2$&$1$ && $2$&$2$&$2$&$1$ && $1$&$1$&$1$&$1$ && $3$&$3$&$3$&$3$
+    \end{tabular}
+
+
+\begin{itemize}
+  \item After the first spy has changed their mind twice (from their starting
+decision), $4$ spies have chosen $1$;
+  \item After they've changed their mind five times, $8$ spies have chosen $3$.
+\end{itemize}
