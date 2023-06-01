@@ -29,10 +29,14 @@ int main(int argc, char* argv[]) {
 
     int unbalancedDancer;
     unbalancedDancer = checkAnswer(output, combinations, dancers);
-    ensuref(! unbalancedDancer, "Wrong Answer: Dancer %d is unbalanced", unbalancedDancer);
+    ouf.quitif(unbalancedDancer, _wa, "Wrong Answer: Dancer %d is unbalanced", unbalancedDancer);
+    sort(output.begin(), output.end());
+    for (int i = output.size() - 1; i > 0; --i) {
+        ouf.quitif(output[i]==output[i-1], _wa, "Duplicate selection %d", output[i]);
+    }
 
     unbalancedDancer = checkAnswer(answer, combinations, dancers);
-    ensuref(! unbalancedDancer, "Wrong Answer by Judge: Dancer %d is unbalanced", unbalancedDancer);
+    ans.quitif(unbalancedDancer, _wa, "Wrong Answer by Judge: Dancer %d is unbalanced", unbalancedDancer);
 
     if (output.size() < answer.size()) quitf(_ok, "User selected fewer combinations than the Judge.");
     else if (output.size() == answer.size()) quitf(_ok, "User selected the same number of combinations as the Judge.");
