@@ -13,8 +13,8 @@ int main(int argc, char *argv[]) {
 
     set<pair<int, int>> desks;
     for (int i = 0; i < deskCount; ++i) {
-        int const x = inf.readInt(0, XY_MAX, "n"); inf.readSpace();
-        int const y = inf.readInt(0, XY_MAX, "n"); inf.readEoln();
+        int const x = inf.readInt(0, XY_MAX, "x"); inf.readSpace();
+        int const y = inf.readInt(0, XY_MAX, "y"); inf.readEoln();
         ensuref(desks.insert({x,y}).second, "Desks overlap at position (%d, %d)", x, y);
     }
     inf.readEof();
