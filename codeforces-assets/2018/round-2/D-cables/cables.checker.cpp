@@ -37,7 +37,7 @@ tuple<int, int, vector<Point>> readInput(InStream& stream) {
     const int loopSize = stream.readInt(3, SL_MAX, "s"); inf.readSpace();
     const int loopCount = stream.readInt(1, SL_MAX / loopSize, "l"); inf.readEoln();
     const int ppCount = loopSize * loopCount; // Number of power-points on the grid
-    stream.ensuref(ppCount < SL_MAX, "Condition s*l < 8192 is not met: %d*%d = %d >= 8192", loopSize, loopCount, ppCount);
+    stream.ensuref(ppCount <= SL_MAX, "Condition s*l < 8192 is not met: %d*%d = %d >= 8192", loopSize, loopCount, ppCount);
 
     set<Point> locations;
     vector<Point> powerPoints(ppCount);
