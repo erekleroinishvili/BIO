@@ -90,13 +90,13 @@ void checkAnswer(InStream& stream, vector<Point> powerPoints, int loopSize, int 
 }
 
 bool intersect(pair<Point, Point> const s1, pair<Point, Point> const s2) {
-    int dx1 = s1.second.first - s1.first.first;
-    int dx2 = s2.second.first - s2.first.first;
-    int dy1 = s1.second.second - s1.first.second;
-    int dy2 = s2.second.second - s2.first.second;
-    int p0 = dy2*(s2.second.first-s1.first.first) - dx2*(s2.second.second-s1.first.second);
-    int p1 = dy2*(s2.second.first-s1.second.first) - dx2*(s2.second.second-s1.second.second);
-    int p2 = dy1*(s1.second.first-s2.first.first) - dx1*(s1.second.second-s2.first.second);
-    int p3 = dy1*(s1.second.first-s2.second.first) - dx1*(s1.second.second-s2.second.second);
+    long long dx1 = s1.second.first - s1.first.first;
+    long long dx2 = s2.second.first - s2.first.first;
+    long long dy1 = s1.second.second - s1.first.second;
+    long long dy2 = s2.second.second - s2.first.second;
+    long long p0 = dy2*(s2.second.first-s1.first.first) - dx2*(s2.second.second-s1.first.second);
+    long long p1 = dy2*(s2.second.first-s1.second.first) - dx2*(s2.second.second-s1.second.second);
+    long long p2 = dy1*(s1.second.first-s2.first.first) - dx1*(s1.second.second-s2.first.second);
+    long long p3 = dy1*(s1.second.first-s2.second.first) - dx1*(s1.second.second-s2.second.second);
     return (p0*p1<=0) && (p2*p3<=0);
 }
